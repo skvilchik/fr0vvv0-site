@@ -1036,32 +1036,53 @@ body.dark-theme .platform-card:hover .platform-icon {
 }
 
 @media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 7rem 2rem 3rem;
+    }
+
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     .hero-left {
         align-items: center;
+        order: 2;
+    }
+
+    .hero-right {
+        order: 1;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 14vw, 5rem);
     }
 
     .hero-desc {
         max-width: 100%;
+        font-size: 1rem;
     }
 
     .hero-image-wrapper {
-        max-width: 320px;
+        max-width: 220px;
         margin: 0 auto;
     }
 
     .hero-image {
-        margin-bottom: -5vh;
+        margin-bottom: 0;
+        border-radius: var(--radius-lg);
     }
 
     .hero-bg-text {
-        font-size: 5rem;
+        font-size: 4rem;
         opacity: 0.02;
+        top: 15%;
+    }
+
+    .hero-socials {
+        justify-content: center;
     }
 
     .nav-links {
@@ -1074,44 +1095,99 @@ body.dark-theme .platform-card:hover .platform-icon {
 
     .about,
     .contact {
-        padding: 6rem 2rem;
+        padding: 4rem 1.5rem;
     }
 
     .pricing,
     .platforms {
-        padding: 6rem 2rem;
+        padding: 4rem 1.5rem;
     }
 
     .section-header {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
     }
 
     .pricing-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .platforms-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about h2 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-disclaimer {
+        padding: 1.25rem;
+    }
+
+    .contact h2 {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
     }
 }
 
 @media (max-width: 640px) {
     .navbar {
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.25rem;
     }
 
     .hero {
-        padding: 8rem 1.5rem 4rem;
+        padding: 6rem 1.25rem 2rem;
     }
 
-    .platforms-grid {
-        grid-template-columns: 1fr;
+    .hero-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
     }
 
-    .audio-player {
-        width: calc(100% - 1.5rem);
-        bottom: 1rem;
-        border-radius: var(--radius-lg);
+    .hero-label {
+        font-size: 0.6875rem;
     }
 
-    .player-time {
-        display: none;
+    .hero-btn {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.6875rem;
+    }
+
+    .hero-socials {
+        gap: 1rem;
+    }
+
+    .hero-socials a {
+        font-size: 0.6875rem;
+    }
+
+    .pricing-card {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .pricing-card-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .pricing-price {
+        font-size: 1.125rem;
+    }
+
+    .platform-card {
+        padding: 1.25rem;
+    }
+
+    .platform-icon {
+        width: 44px;
+        height: 44px;
     }
 
     .contact-links {
@@ -1124,7 +1200,12 @@ body.dark-theme .platform-card:hover .platform-icon {
         max-width: 280px;
     }
 
-    .pricing-card {
-        padding: 2rem 1.5rem;
+    .section-divider {
+        margin: 0 1.5rem;
+        width: calc(100% - 3rem);
+    }
+
+    footer {
+        padding: 2.5rem 1.5rem;
     }
 }
